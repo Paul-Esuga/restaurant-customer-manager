@@ -35,54 +35,6 @@ export default function App() {
   const [selectedPayMethod, setSelectedPayMethod] = useState('');
 
   return (
-    // <ScrollView contentContainerStyle={styles.container}>
-    //   <Text style={styles.title}>Contact Form</Text>
-    //   <Text style={styles.description}>First Name</Text>
-    //   <TextInput style={styles.input}></TextInput>      
-    //   <Text style={styles.description}>Last Name</Text>
-    //   <TextInput style={styles.input}></TextInput>      
-    //   <Text style={styles.description}>Middle Name</Text>
-    //   <TextInput style={styles.input}></TextInput>      
-    //   <Text style={styles.description}>Date of Birth</Text>
-    //   <View>
-    //     <Button title='Pick Date' onPress={() => setShowPicker(true)} />
-    //       {
-    //         showPicker && (
-    //           <DateTimePicker
-    //             value={date}
-    //             mode='date'
-    //             display='default'
-    //             onChange={onChange}
-    //           />
-    //         )}
-    //   </View>
-    //   {/* <Button title='green button' onPress={handlePress} color={"#34C759"}></Button> */}
-    //   {/* <TextInput style={styles.input}></TextInput>       */}
-    //   <Text style={styles.description}>Home Adress</Text>
-    //   <TextInput style={styles.input}></TextInput>      
-    //   <Text style={styles.description}>Date of Registration</Text>
-    //   <View>
-    //     <Button title='Pick Date' onPress={() => setShowPicker(true)} />
-    //       {
-    //         showPicker && (
-    //           <DateTimePicker
-    //             value={date}
-    //             mode='date'
-    //             display='default'
-    //             onChange={onChange}
-    //           />
-    //         )}
-    //   </View>     
-    //   <View>
-    //     <Text style={styles.description}>Developer Boolean Flag</Text>
-    //     <Switch
-    //       trackColor={{false: '#767577', true: '#81b0ff'}}
-    //       thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-    //       onValueChange={toggleSwitch}
-    //       value={isEnabled}
-    //     />
-    //   </View>
-    // </ScrollView>
     <ScrollView>     
       <Text style={styles.title}>Order History</Text>
       <Text style={styles.description}>Order Date</Text>

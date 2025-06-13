@@ -17,8 +17,26 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        initialRouteName='CustomerProfile'
+        screenOptions={({route}) => ({
+          tabBarIcon: ({ color, size }) => {
+            let iconName: keyof typeof Ionicons.glyphMap = 'person';
+
+            if (route.name === "CustomerProfile") {
+              iconName = 'person';
+            } else if (route.name === 'OrderHistory') {
+              iconName = 'list';
+            }
+
+            return <Ionicons name= {iconName} size={size} color={color} />
+          },
+          tabBarActiveTintColor: 'tomato',
+          tabBarInactiveTintColor: 'gray',
+        })}
+      >
         <Tab.Screen name='CustomerProfile' component={CustomerProfile} />
+        <Tab.Screen name='OrderHistory' component={OrderHistory} />
       </Tab.Navigator>
     </NavigationContainer>
   );
