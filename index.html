@@ -49,3 +49,156 @@
     </form>
   </body>
 </html>
+
+<!-- // import { StatusBar } from 'expo-status-bar';
+// import { StyleSheet, Text, View, TextInput, ScrollView, Platform, Button, Alert, Switch, TouchableOpacity} from 'react-native';
+// import CustomerProfile from './CustomerProfile';
+// import react, {useState} from 'react'
+// import DateTimePicker from '@react-native-community/datetimepicker'
+// import { Picker } from '@react-native-picker/picker';
+
+// // export  function DateInput() {
+// //   const [date, setDate] = useState(new Date());
+// //   const [showPicker, setShowPicker] = useState(false);
+
+// //   const onChange = (event, selectedDate) => {
+// //     const currentDate = selectedDate || date;
+// //     setShowPicker(Platform.OS === 'ios');
+// //     setDate(currentDate);
+// //   }
+// // }
+
+// export default function App() {
+//   const [date, setDate] = useState(new Date());
+//   const [showPicker, setShowPicker] = useState(false);
+
+//   const onChange = (_:any, selectedDate: Date | undefined) => {
+//     const currentDate = selectedDate || date;
+//     setShowPicker(Platform.OS === 'ios');
+//     setDate(currentDate);
+//   }
+//   const handlePress = () => {
+//     Alert.alert('Button Pressed', 'You clicked the button!');
+//   };
+
+//   const [isEnabled, setIsEnabled] = useState(false);
+//   const toggleSwitch = () => setIsEnabled(prev => !prev)
+
+//   const [selectedPayMethod, setSelectedPayMethod] = useState('');
+
+//   return (
+//     <ScrollView contentContainerStyle={styles.container}>     
+//       {/* <Text style={styles.title}>Order History</Text> */}
+//       <Text style={styles.description}>Order Date</Text>
+
+//       <View>
+//         <Button title='Pick Date' color="#ff2020" onPress={() => setShowPicker(true)} />
+//           {
+//             showPicker && (
+//               <DateTimePicker
+//                 value={date}
+//                 mode='date'
+//                 display='default'
+//                 onChange={onChange}
+//               />
+//             )}
+//       </View>
+//       <Text style={styles.description}>Menu Item Ordered</Text>
+//       <TextInput style={styles.input} placeholder='Enter main dish or item ordered'></TextInput>   
+//       <Text style={styles.description}>Special Instructions</Text>
+//       <TextInput style={styles.input} placeholder='Dietary preferences, coking iunstructions, modifications...'></TextInput>   
+//       <View>
+//         <Text style={styles.description}>Payment Method</Text>
+//         <Picker
+//           selectedValue = {selectedPayMethod}
+//           style={styles.picker}
+//           onValueChange={(itemValue, itemIndex) => setSelectedPayMethod(itemValue)}
+//           >
+//             <Picker.Item label='Select Payment Method' value=""/>
+//             <Picker.Item label='Cash' value="card"/>
+//             <Picker.Item label='Card' value="cash"/>
+//             <Picker.Item label='Transfer' value="transfer"/>
+//         </Picker>
+//       </View>       
+//       <Text style={styles.description}>Next Reservation Date</Text>
+//       <View>
+//         <Button title='Pick Date' color="#ff2020" onPress={() => setShowPicker(true)} />
+//           {
+//             showPicker && (
+//               <DateTimePicker
+//                 value={date}
+//                 mode='date'
+//                 display='default'
+//                 onChange={onChange}
+//               />
+//             )}
+//       </View>    
+//       <View>
+//         {/* <Text>Submit</Text> */}
+//         <Button 
+//         title='Submit' 
+//         color="#02a120"
+//         />
+//       </View>
+//     </ScrollView>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: 'beige',
+//     // alignItems: 'flex-start',
+//     justifyContent: 'center',
+//     paddingLeft: 50,
+//     marginTop: 0,
+//     marginLeft: 0,
+//     marginRight: 0,
+//     borderRadius: 6,
+//     fontFamily: 'Calibri',
+//     verticalAlign: 'middle',
+//     paddingTop: 20,
+//     // paddingBottom: 100
+//   },
+//   auto: {
+//     height: 4,
+//     width: 10,
+//     borderWidth: 2,
+//     backgroundColor: '#0f0'
+//   },
+//   title: {
+//     textAlign: 'center',
+//     fontWeight: 800,
+//     fontSize: 25,
+//     marginBottom: 15,
+//     paddingTop: 20,
+//     color: 'rgb(204, 10, 10)',
+//   },
+//   input: {
+//     borderWidth: 1,
+//     borderRadius: 4,
+//     height: '6%',
+//     width: '75%',
+//     marginBottom: 10,
+//     borderStyle: 'solid',
+//     borderColor: 'rgb(120, 120, 120)',
+//     paddingRight: 15,
+//   },
+//   description: {
+//     display: 'flex',
+//     fontSize: 14,
+//     marginBottom: 4,
+//     textAlign: 'left',
+//     color: 'rgb(175, 31, 31)',
+//     fontWeight: 500
+//   }, 
+//   picker: {
+//     width: '90%',
+//     height: '50%',
+//     backgroundColor: 'gray'
+
+//   },
+//   datePickerContainer: {
+//     marginBottom: 20
+//   }
+// }); -->

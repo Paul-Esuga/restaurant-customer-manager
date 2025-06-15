@@ -18,28 +18,43 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName='CustomerProfile'
+        initialRouteName='Customer Profile'
         screenOptions={({route}) => ({
           tabBarIcon: ({ color, size }) => {
             let iconName: keyof typeof Ionicons.glyphMap = 'person';
 
-            if (route.name === "CustomerProfile") {
+            if (route.name === "Customer Profile") {
               iconName = 'person';
-            } else if (route.name === 'OrderHistory') {
-              iconName = 'list';
+            } else if (route.name === 'Order History') {
+              iconName = 'list'; // Use the same variable
             }
 
-            return <Ionicons name= {iconName} size={size} color={color} />
+            return <Ionicons name={iconName} size={size} color={color} />
           },
-          tabBarActiveTintColor: 'tomato',
-          tabBarInactiveTintColor: 'gray',
+          tabBarActiveTintColor: 'white',
+          tabBarInactiveTintColor: 'blACK',
+          tabBarStyle: {
+            backgroundColor:'#cc1010',
+            borderTopColor: 'black',
+            borderTopWidth: 2,
+            paddingVertical: 8,
+            marginTop: 5
+          },
+          headerStyle: {
+            backgroundColor: '#cc1010',
+          },
+          headerTintColor: "#ffffff", // Fixed typo: was "#fffff"
+          headerTitleStyle: {
+            fontWeight: 800,
+            color: "white"
+          }
         })}
       >
-        <Tab.Screen name='CustomerProfile' component={CustomerProfile} />
-        <Tab.Screen name='OrderHistory' component={OrderHistory} />
+        <Tab.Screen name='Customer Profile' component={CustomerProfile} />
+        <Tab.Screen name='Order History' component={OrderHistory} />
       </Tab.Navigator>
     </NavigationContainer>
-  );
+)
 }
 
 const styles = StyleSheet.create({
@@ -76,7 +91,6 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     height: '8%',
     width: '80%',
-    marginBottom: 20,
     borderStyle: 'solid',
     borderColor: 'rgb(120, 120, 120)',
     paddingRight: 15,
@@ -87,7 +101,8 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     textAlign: 'left',
     color: 'rgb(175, 31, 31)',
-    fontWeight: 500
+    fontWeight: 500,
+    marginTop: 20,
   }, 
   picker: {
     width: '90%',
